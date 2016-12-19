@@ -1,5 +1,4 @@
 rabbit
-cars
-elephants
-cats
 dogs
+cats
+elephants
