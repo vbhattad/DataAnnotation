@@ -1,0 +1,58 @@
+<html>
+<title> Hello! </title>
+<style>
+    input[type=text],
+    select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    
+    input[type=file] {
+        width: auto;
+        background-color: #4CAF50;
+        color: white;
+        /*padding: 14px 20px;*/
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    input[type=file]:hover {
+        background-color: #45a049;
+    }
+    
+    .button {
+        background-color: #4CAF50;
+        /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+</style>
+
+<body>
+    <div style="padding: 5% 50% 0% 15%;">
+        <div style="font-family: verdana; font-size:30; background-color:#eee; padding:10px;  text-align: center;">
+            {% block content %} {% endblock %}
+           
+        </div>
+         {% if unknowns %}
+            <!--<p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>-->
+            <p style=""> Cannot classify </br> "{{ unknowns }}". </p>
+            <a href="retrain">Please retrain</a>
+           {% endif %}
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<html>
+<title>Create new bucket </title>
+<style>
+    input[type=text],
+    select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    
+    input[type=file] {
+        width: auto;
+        background-color: #4CAF50;
+        color: white;
+        /*padding: 14px 20px;*/
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    input[type=file]:hover {
+        background-color: #45a049;
+    }
+    
+    .button {
+        background-color: #4CAF50;
+        /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+</style>
+
+<body>
+    <div style="padding: 5% 50% 1% 15%;">
+        <div style="font-family: verdana; font-size:30; background-color:#eee; padding:10px;  text-align: center;">
+            <p> Let's Retrain </p>
+
+            {% block content %}
+
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="text" name="foldername" placeholder="What do you want to call this bucket?" required/>
+                </br>
+                <input type="file" name="upload" accept="image/jpeg" multiple="multiple">
+                </br>
+                </br>
+                <button type="submit" class="button">Train me!</button>
+            </form>
+            {% if Training_Complete %}
+            <!--<p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>-->
+            <p> Training Complete !!! </a>
+            </p>
+            {% endif %}
+        </div>
+    </div>
+    <p><a href="{% url 'home' %}">Return to home</a></p>
+
+    {% endblock %}
+
+
+</body>
+
+</html>
