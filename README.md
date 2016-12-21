@@ -72,6 +72,6 @@ As mentioned earlier, there are two parts in this application. The complete appl
 
 # **References**
 
-_  __&quot;Tensorflow&quot;._ _TensorFlow__. N.p., 2016. Web. 19 Dec. 2016._
+-  __&quot;Tensorflow&quot;._ _TensorFlow__.__N.p., 2016. Web. 19 Dec. 2016.__
 
-_&quot;The Web Framework For Perfectionists With Deadlines | Django&quot;._ _Djangoproject.com__. N.p., 2016. Web. 19 Dec. 2016._
+- __&quot;The Web Framework For Perfectionists With Deadlines | Django&quot;._ _Djangoproject.com__. __N.p., 2016. Web. 19 Dec. 2016.__
